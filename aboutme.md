@@ -6,6 +6,13 @@ subtitle: A little bit about myself and what I do.
 
 My name is Tajmeet Singh, but friends often call me Taj. I'm an Afghan national, currently residing in UK and reading Mathematics as an undergraduate student in University of Oxford. I like reading books, comics (including manga and manhwa), watching TV shows, teaching and programming. I'm also the founder of Lady Margaret Hall Coding Society which I started in 2019 and have been teaching/collaborating with people since then.
 
+### Languages that I know:
+- English
+- Hindi
+- Punjabi
+- Farsi/Dari
+- Pashtu
+
 
 ### Programming Languages I can code in:
 - C
