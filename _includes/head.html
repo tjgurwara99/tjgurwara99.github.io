@@ -117,4 +117,21 @@
   <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
   {% endif %}
 
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      },
+      TeX: {
+        Macros: {
+        braket: ['{\\langle #1 \\rangle}', 1],
+        abs: ['\\left\\lvert #2 \\right\\rvert_{\\text{#1}}', 2, ""],
+        norm: ['\\left\\lVert #2 \\right\\rVert_{\\text{#1}}', 2, ""],
+        },
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 </head>
