@@ -14,6 +14,7 @@ comments: true
 
 <details>
 <summary> Define Norm </summary>
+<p> Let $X$ be a vector space over a field $\mathbb{F}$. A norm $\norm{\cdot} : X \to \mathbb{R}$ is a function such that $\forall x,y \in X$ and $\forall \lambda \in \mathbb{F}$:</p>
 <p> (N1) $\| x \| \geq 0 $ with $\| x \| = 0 \iff x = 0 $ </p>
 <p> (N2) $\| \lambda x \| = | \lambda | \| x \| $ </p>
 <p> (N3) $\| x + y \| \leq \| x \| + \| y \| $ (Triangle inequality) </p>
