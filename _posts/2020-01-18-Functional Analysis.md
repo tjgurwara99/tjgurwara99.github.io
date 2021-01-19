@@ -242,8 +242,54 @@ $$
 </p>
 </details>
 
+---
+
+## Isometric Linear Maps
+<details> <summary> Define Isometric Linear Maps </summary>
+    <p>
+        We call a linear function $T: X \to Y$ isometric if for every $x \in X$ we have that $\norm{Tx} = \norm{x}$.
+    </p>
+    <p>
+        Remark: If $T$ is both isometric and bijective then we also have that $T^{-1}$ is linear and isometric.
+        Such maps are called isometric isomorphisms and the spaces $X$ and $Y$ are called isometrically isomorphic.
+    </p>
+
+</details>
 
 ---
+
+## Space of bounded linear operators is a banach space
+<details> <summary> State the theorem that describes that space of bounded linear operators is a banach space. </summary>
+    <p> 
+        <strong>Theorem</strong>:
+        Let $X$ be any normed vector space and let $Y$ be a banach space. Then $L(X,Y)$ equipped with the operator norm is complete
+        and thus Banach space.
+    </p>
+    <details>
+        <summary> <strong>Proof:</strong> </summary>
+        <p>
+        Let $(T_n)$ be a cauchy-sequence in $L(X,Y)$. Then for every $x \in X$ we have that
+        $$
+            \norm{T_nx - T_mx} \leq \norm{T_n - T_m}\norm{x} \to 0
+        $$
+        as $n,m \to \infty$. So, $(T_nx)$ is a cauchy sequence in $Y$ and $Y$ is banach (so complete) therefore $T_nx$
+        converges to some $Tx \in Y$. Now, we show that $x \mapsto Tx$ is an element of $L(X,Y)$ and $T_n \to T$ in $L(X,Y)$.
+        </p>
+        <p>
+        First note that, by linearity of $T_n$ and AOL impliest that $T$ is linear. Now, fix $\epsilon > 0$, $\exists N\in \mathbb{N}$ such that 
+        $\forall n,m \geq N$ we have $\norm{T_n -T_m} < \epsilon$.
+        So for any $x \in X$, we have that:
+        $$
+            \norm{Tx - T_nx} = \norm{\lim_{m\to \infty} T_mx - T_nx} = \lim_{m \to \infty} \norm{T_mx - T_nx} < \epsilon \norm{x}. 
+        $$ 
+        Therefore, $T$ is bounded and linear thus $T \in L(X,Y)$ and $\norm{T - T_n} < \epsilon$ for all $n \geq N$, and 
+        since $\epsilon > 0$ was chosen arbitrarily so $T_n \to T$ as $n \to \infty$. Thus $L(X,Y)$ is complete and hence Banach.
+        </p>
+</details>
+
+
+
+
 <!-- 
 # Template for new Theorem proof block
 <details> <summary> Statement </summary>
