@@ -179,7 +179,7 @@ $$
 ## Bounded Linear Operator
 <details> <summary> Define Bounded Linear Operator </summary>
     <p>
-    Let $(X, \norm{\cdot}{}_X)$ and $(Y, \norm{\cdot}{}_Y)$ be normed vector spaces (always assumed over the same field \mathbb{F}).
+    Let $(X, \norm{\cdot}{}_X)$ and $(Y, \norm{\cdot}{}_Y)$ be normed vector spaces (always assumed over the same field $\mathbb{F}$).
     Then we say that $T : X \to Y$  is a bounded linear operator (aka bounded linear transformation) if $T$ is linear (i.e. $T(x + ay) = T(x) + aT(y)$ $\forall x,y \in X$, $a \in \mathbb{F}$ 
     and $T$ has the property that there exists $M \in \mathbb{R}$ such that $ \forall x \in X$ $\norm{Tx}{}_Y \leq M \norm{x}{}_X$  .
     
