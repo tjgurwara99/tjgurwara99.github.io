@@ -285,8 +285,259 @@ $$
         Therefore, $T$ is bounded and linear thus $T \in L(X,Y)$ and $\norm{T - T_n} < \epsilon$ for all $n \geq N$, and 
         since $\epsilon > 0$ was chosen arbitrarily so $T_n \to T$ as $n \to \infty$. Thus $L(X,Y)$ is complete and hence Banach.
         </p>
+    </details>
 </details>
 
+---
+
+## Composition of Bounded Operators is a Bounded Operator
+<details> <summary> State the therem related to composition of bounded linear operators </summary>
+
+    <p>
+        <strong> Proposition: </strong>
+        The composition $ST$ of two bounded linear operators $S \in L(Y,Z)$ and $T \in L(X,Y)$ between normed vector spaces $X, Y, Z$ is again a bounded linear operator
+        and $\norm{ST}{}_{L(X,Z)} \leq \norm{S}{}_{L(Y,Z)} \norm{T}{}_{L(X,Y)}$ 
+
+    </p>
+    <p>
+        <details> <summary> <strong> Proof: </strong> </summary>
+            $ST$ is linear clearly. Now, for any $x \in X$ we have that:
+            $$
+                \norm{STx} = \norm{S(Tx)} \leq \norm{S} \norm{Tx} \leq \norm{S} \norm{T} \norm{x}
+            $$
+        </details>
+    </p>
+</details>
+
+---
+
+## Composition of sequence of bounded operators converge to composition of limits
+<details> <summary> State the theorem related to the convergence of the composition of sequence of bounded linear operator </summary>
+    <p>
+        <strong> Proposition: </strong>
+        Let $(T_n)$ be a convergent sequence in $L(X,Y)$ and let $(S_n)$ be a convergent sequence in $L(Y,Z)$. Then $S_nT_n \to ST \in L(X,Z)$.
+    </p>
+    <p>
+        <details>
+            <summary> <strong> Proof: </strong> </summary>
+            $$
+                \norm{S_nT_n - ST} = \norm{S_nT_n - ST_n + ST_n - ST} \leq \norm{(S_n - S)} \norm{T_n} + \norm{T_n - T} \norm{S} \to 0
+            $$
+        </details>
+
+    </p>
+</details>
+
+
+---
+
+
+## Exponential of an Operator is well-defined
+<details> <summary> Prove that exponential of an operator is well-defined </summary>
+    <p>
+        <strong> Corollary: </strong>
+        Let $X$ be a Banach space and let $A \in L(x)$. Then $\exp{A} := \sum_{k=0}^\infty \frac{1}{k!} A^k$ 
+        converges in $L(X)$ and hence is a well-defined element of $L(X)$.
+    </p>
+    <details> <summary> <strong> Proof: </strong> </summary>
+        <p>
+            We know that
+            $$
+                \sum_{k=0}^\infty \norm{\frac{1}{k!} A^k} \leq \sum_{k=0}^\infty \frac{\norm{A}^k}{k!} = \exp{\norm{A}} < \infty
+            $$
+            and since $X$ is complete, therefore $L(X)$ is complete. Additionally, the series converges absolutely $\implies$ converges in $L(X)$.
+        </p>
+    </details>
+</details>
+
+
+---
+
+
+## Convergence of Neumann-Series
+<details> <summary> State the theorem related to Neumann-Series </summary>
+    <div>
+    <p>
+        <strong> Lemma: </strong>
+        Let $X$ be a banach space and let $T \in L(X)$ be such that $\norm{T} < 1$. Then the operator $\mathrm{Id} - T$ is invertible with
+        $$
+            (\mathrm{Id} - T)^{-1} = \sum_{i=0}^\infty T^i \in L(X)
+        $$
+    </p>
+        <div>
+        <details> <summary><strong> Proof: </strong></summary>
+            <p>
+                As $\norm{T} < 1$, we know that $\sum \norm{A^k} \leq \sum \norm{A}{}^k < \infty$.
+                So it converges absolutely $ \implies $ converges. So
+                $$
+                    S_n := \sum_{k=0}^n T^k \underset{n \to \infty}{\longrightarrow} S = \sum_{k=0}^{\infty} T^k \in L(X)
+                $$
+                and as
+                $$
+                    (\mathrm{Id} - T) S_n = \mathrm{Id} - A + A - A^2 + A^2 - \cdots - A^n + A^n - A^{n+1} = \mathrm{Id} - A^{n+1}
+                $$
+                and $\norm{A^{n+1}} \leq \norm{A^n} \to 0$ as $n \to \infty$. So, $(\mathrm{Id} - T) S = \mathrm{Id}$.
+            </p>
+        </details>
+        </div>
+    </div>
+
+</details>
+
+
+---
+
+
+## Invertible
+<details> <summary> Define Invertible bounded linear operator</summary>
+    <div>
+        <p>
+            An element $T \in L(X)$ is invertible in $L(X)$ if there exists $S \in L(X)$ such that $ST = TS = \mathrm{Id}$.
+        </p>
+    </div>
+</details>
+
+
+---
+
+
+## Algebraically Invertible
+<details> <summary> Define Algebraically Invertible bounded linear operator</summary>
+    <div>
+        <p>
+            An element $T \in L(X)$ is algebraically invertible in $L(X)$ if there exists a function $S: X \in X$
+            (an algebraic inverse of $T$) such that $ST = TS = \mathrm{Id}$. Note that $S$ may not be in $L(X)$
+        </p>
+    </div>
+</details>
+
+
+---
+
+
+## Conparison Test of Invertibility of Linear Operators
+<details> <summary> State the invertibility test of linear operators</summary>
+    <div>
+        <p>
+            <strong> Corollary: </strong>
+            Let $T \in L(X)$ be invertible. Then for any $S \in L(X)$ with $\norm{S} < {\norm{T^{-1}}}^{-1}$ we have that $T - S$ is invertible.
+        </p>
+        <div>
+            <details> <summary> <strong> Proof: </strong></summary>
+                <p>
+                    As $T$ is invertible so, $T^{-1} \in  L(X)$ and $T - S = T( \mathrm{Id} - T^{-1} S )$.
+                    Note that $T^{-1} S \in L(X)$ with $1 > \norm{T^{-1}} \norm{S} \geq \norm{T^{-1} S}{}_{L(X)}$. So, $\norm{S} < \frac{1}{\norm{T^{-1}}}$
+                    and so by Neumann-series lemma we have that $(\mathrm{Id} - T^{-1}S)$ is invertible with $(\mathrm{Id} - T^{-1}S)^{-1} = \sum_{k=0}^\infty (T^{-1}S)^k \in L(X)$.
+                    Hence $T - S$ is a composition of two invertible operators thus invertible. 
+                </p>
+            </details>
+        </div>
+    </div>
+</details>
+
+
+---
+
+
+# Finite Dimensional Normed Spaces
+
+
+---
+
+
+## All norms in $\mathbb{R}^n$ are equivalent
+<details> <summary> State the proposition that describes the equivalence of norms in euclidean spaces </summary>
+    <div>
+        <p> <strong> Proposition: </strong>
+        Any norm $\norm{\cdot}$ on $\mathbb{R}^n$, $n \in \mathbb{N}$ is equivalent to the euclidean
+        norm $\norm{x}{}_2 := \left( \sum_{i=1}^n {x_i}^2 \right)^{\frac{1}{2}}$ and hence all norms on $\mathbb{R}^n$ are equivalent.
+        </p>
+        <div>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                <p>
+                    First we prove that $\exists C_1 \in \mathbb{R}$ such that $\norm{x} \leq C_1 \norm{x}{}_2$.
+                    <br/>
+                    $ x = (x_1, x_2, \cdots, x_n) = \sum_{i=1}^n x_i e_i$ so,
+                    $$
+                        \norm{x} \underset{\Delta-ineq}{\leq} \sum_{i=1}^n \norm{e_i} \norm{x_i} \underset{Cauchy-Schwarz}{\leq} \left( \sum_{i=1}^n \abs{x}{}^2 \right)^{\frac{1}{2}} \left( \sum_{i=1}^n \norm{e_i}{}^2 \right)^{\frac{1}{2}} = C_1 \norm{x}{}_2
+                    $$
+                </p>
+                <p>
+                    Now, to prove the opposite inequality, we suppose for a contradiction that there exists no $C_2$ such that 
+                    the inequality $\norm{x}{}_2 \leq C_2 \norm{x}$ holds for every $x \in X$.
+                    Consider a sequence $x^{(n)}$ in $\mathbb{R}^n \setminus \{ 0 \}$ such that $\norm{x^{(n)}}{}_2 \geq n \norm{x^{(n)}}$
+                    and therefore let $\widetilde{x}^{(n)} = \frac{x^{(n)}}{\norm{x^{(n)}}} \in S^{n-1}$ which is compact in $\mathbb{R}^n$
+                    by Heine-Borel because closed and bounded and $\mathbb{R}^n$ is complete $\implies$ $S^{n-1}$ is complete and in particular
+                    $\widetilde{x}^{(n)} \to x \in S^{n-1}$ with respect to $\norm{\cdot}{}_2$ norm. Now, as $x \in S^{n-1}$ then $x \neq 0$ so $\norm{x} \neq 0$
+                    but 
+                    $$
+                    \norm{x} \underset{\Delta -ineq}{\leq} \norm{x - \widetilde{x}^{(n)}} + \norm{\widetilde{x}^{(n)}} \leq C_1 \norm{x - \widetilde{x}^{(n)}}{}_2 + \frac{1}{n} \to 0
+                    $$
+                </p>
+                <p>
+                    <strong> Note: </strong>
+                    The revese inequality can be proved in a different way, by considering $\norm{x} := f(x)$ which is Lipschitz and restricting $f_{|S^{n-1}}$ attains its bounds.
+                    In particular, its minimum at $x^\ast \in S^{n-1}$ and $x^\ast \neq 0$, so $f(x^\ast) > 0$ therefore take $C_2 := \frac{1}{f(x^\ast)}$ then
+                    $\forall x \in X$
+                    $$
+                        C_2 \norm{x} = C_2 \norm{\norm{x}{}_2 \cdot \frac{x}{\norm{x}{}_2}} = C_2 \norm{x}{}_2 \cdot f\left( \frac{x}{\norm{x}{}_2}\right) \geq C_2 \norm{x}{}_2 \cdot f(x^\ast) = \norm{x}{}_2
+                    $$
+                </p>
+            </details>
+        </div>
+    </div>
+</details>
+
+
+---
+
+
+## Norm of finite dimensional space are equivalent
+<details> <summary> State the theorem about the equivalence of norms of finite dimensional normed vector spaces. </summary>
+    <div>
+        <p> <strong> Theorem: </strong>
+            Let $X$ be any finite dimensional space. Then any two norms $\norm{\cdot}$ and $\norm{\cdot}{}'$ on $X$ are equivalent.
+        </p>
+        <div>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                <p>
+                    Let $m := \mathrm{dim}(X)$. Choosing a basis $e_1, e_2, \cdots, e_m$ of $X$ and map:
+                    $$
+                        Q : (\mu_1, \cdots, \mu_m) \mapsto \sum_{i=1}^m \mu_i e_i \in X
+                    $$
+                    and $(\mu_1, \cdots, \mu_m) \in \mathbb{R}^m$ is a linear bijection.
+                </p>
+                <p>
+                    Now, for any two norms $\norm{\cdot}{}_X$ and $\norm{\cdot}{}_X' $ on $X$, we get two norms $\norm{\cdot}{}_{\mathbb{R}^m}$ and 
+                    $\norm{\cdot}{}_{\mathbb{R}^m}'$ on $\mathbb{R}^m$ by defining for every $x \in \mathbb{R}^m
+                    $$
+                        \norm{x}{}_{\mathbb{R}^m} := \norm{Q(x)}{}_X \ \ \ text{and} \ \ \ \norm{x}{}_{\mathbb{R}^m}' := \norm{Q(x)}{}_X'
+                    $$
+                </p>
+                <p>
+                    Note that these norms are chosen such that maps
+                    $$
+                        Q: (\mathbb{R}^m, \norm{\cdot}{}_{\mathbb{R}^m}) \to (X, \norm{\cdot}{}_X) \ \ \ \text{and} \ \ \ Q': (\mathbb{R}^m, \norm{\cdot}{}_{\mathbb{R}^m}') \to (X, \norm{\cdot}{}_X')
+                    $$
+                    are isometric and hence as they are bijections so are their inverses (so $Q$ and $Q'$ are isometrically isomorphic). Now,
+                    by using the proposition that proves that all norms on $\mathbb{R}^n$ are equivalent, we get 
+                    $$
+                        \norm{x}{}_{\mathbb{R}^m} \leq C_1 \norm{x}{}_{\mathbb{R}^m}' \ \ \ \text{and} \ \ \ \norm{x}{}_{\mathbb{R}^m}' \leq C_2 \norm{x}{}_{\mathbb{R}^m}
+                    $$
+                    thus for any $y \in X$
+                    $$
+                        \norm{y}{}_X = \norm{Q^{-1}(y)}{}_{\mathbb{R}^m} \leq C_1 \norm{Q^{-1}(y)}{}_{\mathbb{R}^m}' = C_1 \norm{x}{}_{\mathbb{R}^m}
+                    $$
+                    and similarly $\norm{y}{}_X' \leq C_2 \norm{y}{}_X$
+                </p>
+            </details>
+        </div>
+    </div>
+
+</details>
+
+
+---
 
 
 
