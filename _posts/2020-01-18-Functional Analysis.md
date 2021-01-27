@@ -528,7 +528,7 @@ $$
                     $$
                         \norm{y}{}_X = \norm{Q^{-1}(y)}{}_{\mathbb{R}^m} \leq C_1 \norm{Q^{-1}(y)}{}_{\mathbb{R}^m}' = C_1 \norm{x}{}_{\mathbb{R}^m}
                     $$
-                    and similarly $\norm{y}{}_X' \leq C_2 \norm{y}{}_X$
+                    and similarly $\norm{y}{}_X' \leq C_2 \norm{y}{}_X$.
                 </p>
             </details>
         </div>
@@ -538,6 +538,76 @@ $$
 
 
 ---
+
+
+## All linear maps from Finite dimensional normed space to normed space is Bounded linear operator
+<details> <summary> Carefully state the theorem that describes the structure of linear maps </summary>
+    <div>
+        <p> <strong> Theorem: </strong>
+            Let $(X, \norm{\cdot}{}_X)$ be a finite dimensional normed space and let $(Y, \norm{\cdot}{}_Y)$ be any normed space.
+            Then any linear map $T : X \to Y$ is an element of $L(X,Y)$ i.e. $T$ is a Bounded linear operator.
+        </p>
+        <div>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                Given $T : X \to Y$ linear map, we set for every $x \in X$, $\norm{x}{}_T := \norm{x}{}_X + \norm{Tx}{}_Y$. Now check that this is indeed a norm on X:
+                $$
+                    \begin{align}
+                        (N1) & \norm{x}{}_T \geq 0 \ \ \text{with} \ \  \norm{x}{}_T = 0 \iff x = 0 \\
+                        (N2) & \norm{\lambda x}{}_T = \norm{\lambda x}{}_X + \norm{T(\lambda x)}{}_Y = \abs{\lambda} \norm{x}{}_X + \abs{\lambda} \norm{Tx}{}_Y = \abs{\lambda}\norm{x} \\
+                        (N3) & \norm{x + y}{}_T = \norm{x + y}{}_X + \norm{T(x + y)}{}_Y \\
+                            & \leq \norm{x}{}_X + \norm{y}{}_X + \norm{Tx}{}_Y + \norm{Ty}{}_Y = \norm{x}{}_T + \norm{y}{}_T. \\
+                    \end{align}
+                $$
+                Now, by theorem that proves norms on finite dimensional normed spaces are equivalent we have that 
+                $\norm{\cdot}{}_T$ and $\norm{\cdot}{}_X$ are equivalent.
+                Therefore, there exists $C \in \mathbb{R}$ such that $\norm{x}{}_T \leq C \norm{x}{}_X$
+                and clearly $\norm{Tx}{}_Y \leq \norm{x}{}_T$ (by def).
+                So, $\norm{Tx}{}_T \leq C \norm{x}{}_X$ thus $T \in L(X,Y)$.
+            </details>
+        </div>
+    </div>
+
+</details>
+
+
+---
+
+
+## Finite dimensional normed spaces are homeomorphic to euclidean spaces
+<details> <summary> Simple corollary of above theorem </summary>
+    <div>
+        <p>
+            <strong> Corollary: </strong>
+            Let $(X, \norm{\cdot}{})$ be a finite dimensional normed space. Then $(X, \norm{\cdot} )$ is 
+            homeomorphic to $\mathbb{F}^m$, $m = \mathrm{dim}(X)$ and $\mathbb{F} = \mathbb{R} $ respectively 
+            $\mathbb{F} = \mathbb{C}$, and a linear homeomorphism from $\mathbb{F}^m$ to $(X, \norm{\cdot} )$ 
+            can be obtained by choosing any basis $f_1, f_2, \cdots, f_m$ of $X$ and defining 
+            $$
+                Q: \mathbb{F}^m \ni (\mu_1, \cdots, \mu_m) \to \sum_{i=1}^m \mu_i f_i \in X
+            $$
+        </p>
+    </div>
+</details>
+
+
+---
+
+
+## All finite dimensional normed spaces are complete
+<details> <summary> State the theorem that describes the relation between completeness and finite dimensional spaces </summary>
+    <div>
+        <p> <strong> Theorem: </strong>
+            Every finite dimensional normed space $(X, \norm{\cdot} )$ is complete, i.e. a Banach space.
+        </p>
+        <div>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                <p>
+                    We know that $\mathbb{F}^n$, $\mathbb{F} = \mathbb{R}$ (or $\mathbb{C}$)
+                <p>
+            <details>
+        </div>
+    </div>
+</details>
 
 
 
