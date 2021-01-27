@@ -29,7 +29,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
 
 ---
 ## Naive Collection Axiom
-
+<ol>
+<li>
 <details> <summary> Naive collection axiom </summary>
     <p>
     If $\phi(x)$ is any property of sets, then the set $\{ x : \phi(x) \}$ exists.
@@ -40,11 +41,15 @@ describe everything there is to mathematics. However, this optimism has faded aw
         but rather this axiom creates inconsistencies that we can't really get around unless we tweak this definition is some way. A well known paradox, known as "Russell's paradox" is a proof of this inconsistency.
     </p>
 </details>
+</li>
+</ol>
+
 
 ---
 
 ## Russell's Paradox
-
+<ol>
+<li>
 <details> <summary> Russell's Paradox </summary>
     <p>
     <strong> Theorem: </strong> The naive collection axiom is inconsitent.
@@ -64,18 +69,23 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </details>
     </p>
 </details>
+</li>
+</ol>
 
 ---
 
 
 ## Definitions needed for writing axioms formally
 
+<ol>
+<li>
 <details> <summary> State the definition of Empty Set </summary>
     <p>
         <strong> Definition: </strong> The empty set, denoted by $\emptyset$, is the set with no elements.
     </p>
 </details>
-
+</li>
+<li>
 <details> <summary> State the definition of union of a set</summary>
 <p>
     <strong> Definition: </strong> Suppose $A$ is a set. Then $\bigcup A$ is defined to be 
@@ -91,7 +101,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
     <strong> NOTE: </strong> The reason for defining it this way is because we can easily deal with infinite elements.
 </p>
 </details>
-
+</li>
+<li>
 <details> <summary> Informal definition of Class </summary>
     <p>
         A class is anything of the form 
@@ -101,15 +112,19 @@ describe everything there is to mathematics. However, this optimism has faded aw
         where $\phi(x)$ is a property of sets. Example: $\{x : x = x \}$ is a class of all sets.
     </p>
 </details>
-
+</li>
+</ol>
 
 ---
 
 ## Basic Axioms
+
 <details> 
     <summary> 
         State the ZFC Axioms
     </summary>
+    <ol>
+    <li>
     <p>
         <details> <summary> <strong> Axiom of extensionality </strong> </summary> 
         <p>
@@ -117,6 +132,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
         </details>
     </p>
+    </li>
+    <li>
     <p>
         <details> <summary> <strong> Empty set axiom </strong> </summary>
         <p>
@@ -124,6 +141,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
         </details>
     </p>
+    </li>
+    <li>
     <p>
         <details> <summary> <strong> Axiom of pairs </strong> </summary> 
         <p>
@@ -131,6 +150,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
         </details>
     </p>
+    </li>
+    <li>
     <p>
         <details> <summary> <strong> Axiom of Unions </strong> </summary> 
         <p>
@@ -138,6 +159,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
         </details>
     </p>
+    </li>
+    <li>
     <p>
         <details> <summary> <strong> Subset axiom scheme </strong> </summary> 
         <p>
@@ -155,6 +178,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
         </details>
     </p>
+    </li>
+    <li>
     <p>
         <details> <summary> <strong> Axiom of Foundation </strong> </summary>
         <p>
@@ -162,12 +187,23 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
         </details>
     </p>
+    </li>
+    <li>
+        <details> <summary> <strong> Powerset Axiom </strong> </summary>
+        <p>
+            Let $X$ be a set. Then $\mathcal{P}(X)$ is a set.
+        </p>
+        </details>
+    </li>
+    </ol>
 </details>
+
 
 ---
 
 ## Some propositions related to the axioms
-
+<ol>
+<li>
 <details> <summary> State the proposition describing the uniqueness of empty set. </summary>
     <p>
         There is at most one empty set.
@@ -177,7 +213,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         every element of $b$ is an element of $a$. Hence by the axiom of extensionality $a = b$.
     </details>
 </details>
-
+</li>
+<li>
 <details>
     <summary> State a proposition about a set in a set (application of axiom of pairs) </summary>
     <p>
@@ -191,6 +228,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
     </details>
     </p>
 </details>
+</li>
+<li>
 
 <details>
     <summary> State the proposition about empty set and set containing empty set. </summary>
@@ -206,6 +245,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
     </p>
 </details>
 
+</li>
+<li>
 <details>
     <summary> State the proposition explaining the structure of $\bigcup$ of sets </summary>
     <p>
@@ -219,6 +260,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </details>
     </p>
 </details>
+</li>
+<li>
 
 <details> <summary> State the proposition which describes the structure of set difference. </summary>
     <p>
@@ -230,6 +273,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
     </p>
     </details>
 </details>
+</li>
+<li>
 
 <details> <summary> State the proposition explaining the structure of intersection of a set. </summary>
     <p>
@@ -241,6 +286,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
     </p>
     </details>
 </details>
+</li>
+<li>
 
 <details> <summary> State the main consequence of the Subset Axiom Scheme. </summary>
     <p> <strong> Theorem: </strong>
@@ -263,6 +310,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </details>
     </p>
 </details>
+</li>
+<li>
 
 <details> <summary> State the consequence of Foundation Axiom </summary>
     <p> <strong> Proposition: </strong>
@@ -277,6 +326,8 @@ describe everything there is to mathematics. However, this optimism has faded aw
     </p>
 </details>
 
+</li>
+<li>
 <details> <summary> State the equavalent condition of Axiom of Foundation in the presence of all other axioms </summary>
     <p>
         <strong> Proposition: </strong> Let $a$ be any set. Then there does not exist a set $\{a_0, a_1, a_2, \cdots \}$ such that $a = a_0 \ni a_1 \ni a_2 \ni \cdots$
@@ -287,6 +338,150 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </details>
     </p>
 </details>
+</li>
+</ol>
 
 ---
 
+## Ordered Pairs
+
+<ol>
+<li>
+<details> <summary> State the definition of ordered pair </summary>
+    <p>
+        <strong> Definition: </strong>
+        Suppose $a$ and $b$ are sets. We define the ordered pair $\langle a , b \rangle$ to be $\{ \{ a \} , \{ a,b \} \}$.
+    </p>
+</details>
+</li>
+<li>
+<details> <summary> State the existence theorem for ordered pairs </summary>
+    <p>
+        <strong> Proposition: </strong> If $a$ and $b$ are sets, then so is $\langle a, b \rangle$.
+    </p>
+    <p>
+        <details> <summary> <strong> Proof: </strong> </summary>
+            By the Axiom of Pairs, $\{ a, b \}$ is a set. Applying the Axiom of Pairs to $a$ and $a$, $\{ a, a \}$ is a set. Now applying the Axiom of Pairs again, 
+            gives that
+            $$
+                \langle a, b \rangle = \{ \{ a \}, \{ a, b \} \}
+            $$
+            is a set.
+        </details>
+    </p>
+</details>
+</li>
+<li>
+<details> <summary> State the theorem about the proper functioning of ordered pair definition as a set. </summary>
+    <p>
+        <strong> Proposition: </strong> $\langle a, b \rangle = \langle c, d \rangle$ if and only if $a = c$ and $b = d$.
+    </p>
+    <p>
+        <details> <summary> <strong> Proof: </strong> </summary>
+            <p>
+                $\implies$ Suppose $\langle a, b \rangle = \langle c, d \rangle$. Then
+                $$
+                    \{ \{ a\}, \{ a, b \} \} = \{ \{ c\}, \{ c, d \} \}.
+                $$
+            </p>
+            <p>
+                Applying the Axiom of Unions, take the union of both sides:
+                $$
+                    \bigcup \{ \{ a\}, \{ a, b \} \} = \bigcup \{ \{ c\}, \{ c, d \} \},
+                $$
+                that is, $\{ a, b \} = \{ c, d \}$.
+            </p>
+            <p>
+                Now if $a = b$, then since $\{ c, d \} = \{a, b\} = \{ a \}$, $c = a$ and $d = a$, so $a = c$ and $b = d$ as required. Similarly if $c = d$, $a = c$ and $b = d$ follows.
+            </p>
+            <p>
+                If $a \neq b$ and $c \neq d$, then $\{ a,b \} \neq \{ a \}$ and $\{ c, d \} \neq \{ c \}$, so
+                $$
+                    \{ \{ a \}, \{ a, b \} \} \setminus \{ \{ a, b \} \} = \{ \{ a \} \},
+                $$
+                and 
+                $$
+                    \{ \{ c \}, \{ c, d \} \} \setminus \{ \{ c, d \} \} = \{ \{ c \} \}.
+                $$
+                Note: the existence of $ \{ \{ a, b \} \}$ and $\{ \{ c, d \} \}$ can easily be shown (what axiom do we use to show that?)
+            </p>
+            <p>
+                Since
+                $$
+                    \{ \{ a\}, \{ a, b \} \} = \{ \{ c\}, \{ c, d \} \}
+                $$
+                and 
+                $$
+                    \{ a, b \} = \{ c, d \},
+                $$
+                we have that 
+                $$
+                    \{ \{ a \} \} = \{ \{ c \} \}
+                $$
+                and thus $\{ a \} = \{ c \}$ and then $a = c$; and
+                $$
+                    \{ b \} = \{ a, b \} \setminus \{ a \} = \{ c, d \} \setminus \{ c \} = \{ d \},
+                $$
+                so $b = d$.
+            </p>
+            <p> $\impliedby$ is trivial.
+            </p>
+        </details>
+    </p>
+</details>
+</li>
+</ol>
+
+
+---
+
+## Powersets and Products
+
+<ol>
+<li>
+<details> <summary> State the definition of Powerset of a set </summary>
+    <p>
+        <strong> Definition: </strong> Let $X$ be a set. The powerset of $X$, denoted $\mathcal{P}(X)$, is the class of all subsets of X.
+    </p>
+</details>
+</li>
+<li>
+    <details> <summary> State the theorem which talks about injection from a set to its powerset </summary>
+        <p>
+            <strong> Theorem: </strong>
+            Let $X$ be a set. Then there is an injection from $X$ to $\mathcal{P}(X)$.
+        </p>
+        <p>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                Define $f : X \to \mathcal{P}(X)$ as follows:
+                $$
+                    f: a \mapsto \{ a \}.
+                $$
+                This is clearly well-defined and one-to-one.
+            </details>
+        </p>
+    </details>
+</li>
+<li>
+    <details> <summary> State Cantor's Theorem </summary>
+        <p>
+            <strong> Theorem: </strong>
+            Let $X$ be a set. Then there is no surjection from $X$ to $\mathcal{P}(X)$.
+        </p>
+        <p>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                <p>
+                    Suppose $g$ is a surjection from $X$ to $\mathcal{P}(X)$. Let
+                    $$
+                        D = \{ a \in x : a \not\in g(a) \}.
+                    $$
+                    Then by Subset Axiom Scheme, D is a set.
+                </p>
+                <p>
+                    Since $g$ is onto, $D = g(a)$ for some $a$. But then $a \in D \iff a \not\in D$, contradiction!
+                </p>
+            </details>
+        </p>
+    </details>
+</li>
+<ol>
