@@ -117,3 +117,67 @@ comments: true
 
 ## Examples of Hilber spaces
 
+1. $\mathbb{R}^n$ and $\mathbb{C}^n$ with the usual dot product are Hilbert spaces called real and complex $n$-dimensional Euclidean space.
+2. $l^2$ is a Hilbert space. For $ x = \{ x_n \} $, $ y = \{ y_n \} \in l^2 $ put $ \langle x, y \rangle = \sum x_n \bar{y}_n. $ Then 
+$ \langle \cdot, \cdot \rangle $ is an inner product which defines a norm on $ l^2 $.
+3. $L^2$ is a Hilbert space. The inner product of $f, g \in L^2$ is $ \langle f, g \rangle = \int f \bar{g} $. Note that this space is complete (proven as a
+consequence of Riesz-Fisher theorem.)
+4. The space $C[0,1]$ of continuous functions on the interval $[0,1]$ is an incomplete inner product space with the inner product taken from $L^2$.
+5. **Bergman Space**: Let $\mathbb{D}$ be the open unit disk in $\mathbb{C}$. The space $A^2(\mathbb{D})$ consists of all functions which are square integrable
+and holomorphic in $\mathbb{D}$ is a closed subspace of $L^2(\mathbb{D})$ and is thus a Hilbert space. (This is a consequence of being closed in a hilbert space.)
+6. **Hardy Space**: The space $H^2(\mathbb{T})$ of all functions $f \in L^2(-\pi, \pi)$ whose Fourier series are of the form $ \sum_{n \geq 0} a_n e^{inx} $ is a
+closed subspace of $L^2(-\pi, \pi)$ and is thus a Hilbert space.
+7. **Sobolev Space $H^1(a,b)$**: The space $H^1(a,b)$ is a Hilbert space with the inner product $\braket{u,v} = \int_a^b (u\bar{v} + u'\bar{v}' \dx.$ We say that $u \in H^1(a,b)$ if $u\in L^2(a,b)$ and there exists a function $v \in L^2(a,b)$ such that for some constant $A$ and for almost all $x \in (a,b).$
+
+$$
+    u(x) = A + \int_a^x v(y) \dx
+$$
+
+Note: There could be something going on with **Sobolev spaces** and **Gronwall's inequality/lemma**.
+
+---
+
+## Orthogonality
+
+<ol>
+<li>
+<details> <summary> Define what is meant by two vectors are orthogonal </summary>
+    <p>
+        <strong> Definition: </strong>
+        Two vectos $x,y \in (X, \ubraket)$ are said to be orthogonal if $\braket{x,y} = 0$.
+    </p>
+
+</details>
+</li>
+
+<li>
+<details> <summary> Define Orthogonal complement of a space </summary>
+    <p>
+        <strong> Definition: </strong>
+        Let $Y$ be a subset of $(X, \ubraket)$. We define (orthagonal complement of $Y$ if $Y$ is a subspace of $X$ to be) $Y^\perp$ as the space of all vectors 
+        $v \in X$ such that $\braket{v,y} = 0$ for all $y \in Y$.
+    </p>
+</details>
+</li>
+
+<li>
+<details> <summary> State the properties of Orthogonal Complement </summary>
+    <p>
+        
+    </p>
+</details>
+</li>
+
+
+
+
+<!-- for definitions
+
+<li>
+<details> <summary> </summary>
+    <p>
+        <strong> </strong>
+        
+    </p>
+</details>
+</li> -->
