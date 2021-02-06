@@ -500,7 +500,13 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
     </details>
 </li>
+</ol>
 
+---
+
+## Cartesian products
+
+<ol>
 <li>
     <details> <summary> State the definition of Cartesian Product </summary>
         <p>
@@ -512,12 +518,83 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
     </details>
 </li>
+
 <li>
     <details> <summary> State the proposition about the structure of $A \times B$ </summary>
-        <p>
+        <p> <strong> Proposition: </strong>
+            If $A$ and $B$ are sets, then $A \times B$ is a set.
+            <details> <summary> <strong> Proof: </strong> </summary>
+                <p>
+                Applying the Axiom of Pairs, Unions and the Powerset Axiom, we get that:
+                $$
+                    \mathcal{PP}\bigcup \{A, B \} = \mathcal{PP}(A \cup B)
+                $$
+                is a set.
+                </p>
+                <p>
+                Now applying the Subset Axiom Scheme, we have that:
+                $$
+                    \{ x \in \mathcal{PP}(A \cup B): \exits a \in A, b \in B \, x = \braket{a,b}}
+                $$
+                is a set.
+                </p>
+                <p>
+                This set is clearly contained in the class $ A \times B $. Now we need to prove that if $x \in A \times B$ then $x \in \mathcal{PP}(A \cup B).$
+                </p>
+                <p>
+                But if $x \in A \times B,$ then for some $a \in A$ and $b \in B,$ $x = \braket{a,b} = \{\{a \}, \{a, b \}\}.$ Both $\{a\}$ and $\{a,b\}$
+                are subsets of $\mathcal{P}(A \cup B)$. Thus $\{\{ a \}, \{ a,b \} \}$ is a subset of $\mathcal{P}(A \cup B)$ and so an element of
+                $\mathcal{PP}(A \cup B).$
+                </p>
+            </details>
+        </p>
+    </details>
 </li>
-
 </ol>
 
 ---
 
+## Relations and Functions
+
+<ol>
+<li>
+    <details>   <summary>   State the defintion of relation between two sets    </summary>
+        <p>
+            <strong>    Definition:    </strong>
+            A relation between sets $A$ and $B$ is a subset of $A \times B$.
+        </p>
+    </details>
+</li>
+<li>
+    <details>   <summary> State the definition of a function </summary>
+        <p>
+            <strong>    Defintion:   </strong>
+            A relation $f$ between sets $A$ and $B$ is a function if and only if $\forall a \in A,$ there exists a unique $b \in B$ such that
+            $\braket{a,b} \in f.$ We write $b = f(a).$
+        </p>
+    </details>
+</li>
+<li>
+    <strong> Notation: </strong> Class of all functions from $A$ to $B$ is denoted as $ ^AB. $
+</li>
+<li>
+    <details> <summary> State the proposition that describes the structure of $^AB.$ </summary>
+        <p>
+            <strong> Proposition: </strong>
+            Suppose that $A$ and $B$ are sets. Then $^AB$ is a set.
+        </p>
+        <details> <summary> Proof: </summary>
+            <p>
+                From the definition of relation, we have that $\mathcal{P}(A \times B)$ is the set of all relations. Since $A \times B$ is a set then
+                $\mathcal{P}(A \times B)$ is a set by the Powerset axiom.
+            </p>
+            <p>
+                Now let $U = \{ f \in \mathcal{P}(A \times B): \forall a \in A \, \exists \, unique \, b \in B \, \braket{a,b} \in f \}$. $U$ is a set by Subset Axiom
+                Scheme. Clearly, $^AB$ is contained in $U$. To prove that $U$ is contained in $^AB$ (not sure what to do after this) 
+            </p>
+        </details>
+    </details>
+</li>
+</ol>
+
+---
