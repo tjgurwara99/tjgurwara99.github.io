@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My notes on Set Theory
+title: Set Theory
 subtitle: Axiomatic set up of sets as structures
 tags: [set-theory, sets]
 comments: true
@@ -484,6 +484,40 @@ describe everything there is to mathematics. However, this optimism has faded aw
         </p>
     </details>
 </li>
-<ol>
+<li>
+    <details> <summary> State a corollary to Cantor's Theorem </summary>
+        <p>
+            <strong> Corollary: </strong> There is no surjection from $\mathcal{P}X \to X.$
+        </p>
+        <p>
+            <details> <summary> <strong> Proof: </strong> </summary>
+                Suppose $f : \mathcal{P}X \to X$ is one-to-one. Then
+                \[
+                    g: a \mapsto \twopartdef{b}{a = f(a)}{\emptyset}{a \not\in \mathrm{ran} \, f} 
+                \]
+                is a surjection from $X$ to $\mathcal{P}X.$
+            </details>
+        </p>
+    </details>
+</li>
+
+<li>
+    <details> <summary> State the definition of Cartesian Product </summary>
+        <p>
+        <strong> Defintion: </strong>
+            Suppose $A$ and $B$ are sets. Their Cartesian product is
+            $$
+                A \times B = \{ \braket{a,b}: a \in A, b \in B \}.
+            $$
+        </p>
+    </details>
+</li>
+<li>
+    <details> <summary> State the proposition about the structure of $A \times B$ </summary>
+        <p>
+</li>
+
+</ol>
 
 ---
+
