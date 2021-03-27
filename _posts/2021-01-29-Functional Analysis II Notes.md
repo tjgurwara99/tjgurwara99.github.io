@@ -161,14 +161,95 @@ Note: There could be something going on with **Sobolev spaces** and **Gronwall's
 </li>
 
 <li>
-<details> <summary> State the properties of Orthogonal Complement </summary>
-    <p>
-        
-    </p>
+<details> <summary> State the properties of Orthogonal Complement of a subset of inner product space </summary>
+       <ol>
+            <li>
+                <details>
+                    <summary>
+                        $Y^\perp$ is a closed subspace of $X$.
+                    </summary>
+                    <p>
+                    <details> <summary> <strong> Proof </strong> </summary>
+                    <p>
+                        It is clear that $Y^\perp$ is a linear space of $X$. (Hint: take $a \in Y^\perp$, $x,y \in X$, $\alpha, \beta \in \mathbb{F}$ and consider
+                        $\braket{\alpha x + \beta y, a}$).
+                    </p>
+                    <p>
+                        Now, to prove that it is a closed subspace, consider a sequence $(x_n)$ in $A^\perp$ such that $x_n \to x$ for some $x \in X$. Then for all
+                        $a \in Y$, we have that:
+                        $$
+                            0 = \braket{0, a} = \lim_{n \to \infty} \braket{x - x_n, a} = \braket{x, a} - \lim{n \to \infty} \braket{x_n, a}
+                        $$
+                        which implies that $\braket{x, a} = 0$ thus $x \in Y^\perp$
+                    </p>
+                    </details>
+                    </p>
+                </details>
+            </li>
+            <li>
+                <details> <summary> $Y^\perp \subset Y^{\perp\perp}.$ </summary>
+                    <p>
+                        <details> <summary> <strong> Proof: </strong> </summary>
+                            <p>
+                                We have that $Y \subset X$ and $Y^\perp := \{v \in X: \forall y \in Y \, \braket{v,y} = 0 \}$. Also, we have that
+                                $ Y^{\perp\perp} := \{ z \in X : \forall v \in Y^\perp \, \braket{z,v} = 0 \}$. But then if $x \in Y$ then $\braket{x, y} = 0$
+                                for all $y \in Y^\perp$. Note that $x \in X$ as $Y \subset X$, therefore $x \in Y^{\perp\perp}.$. Thus $Y \subset Y^{\perp\perp}.$
+                            </p>
+                        </details>
+                    </p>
+                </details>
+            </li>
+            <li>
+                <details> <summary> If $Y \subset Z \subset X,$ then $Z^\perp \subset Y^\perp.$</summary>
+                    <p>
+                        <details> <summary> <strong> Proof: </strong> </summary>
+                            <p>
+                                Let $x \in Z^\perp$ and $y \in Z$ then $y \in Y \supset Y $, therefore $\braket{x, y} = 0$. This is true for arbitrary $y \in Y$,
+                                thus $x \in Y^\perp \implies Z^\perp \subset Y^\perp$.
+                            </p>
+                        </details>
+                    </p>
+                </details>
+            </li>
+            <li>
+                <details> <summary> $ \overline{U}^\perp = U^\perp $ </summary>
+                    <p>
+                        <details> <summary> <strong> Proof: </strong> </summary>
+                            <p>
+                                $ U \subseteq \overline{U}^\perp $ then $ \overline{U}^\perp \subseteq U^\perp $.
+                            </p>
+                            <p>
+                                We know that $ \forall b \in \overline{U} $, there exists a sequence $ (b_n) \in U $ such that $ \norm{b_n - b} \to 0 $.
+                                So for $ x \in U^\perp $, we have:
+                                $$
+                                    0 = \braket{0, x} = \lim_{n \to \infty} \braket{b_n - b, x} = \lim_{n \to \infty} \braket{b_n, x} - \braket{b, x}.
+                                $$
+                                Thus $ \braket{b, x} = 0$ by continuity of $\braket{\cdot, \cdot}. $ So $ x \in \overline{U}^\perp \implies U^\perp \subseteq \overline{U}^\perp $
+                            </p>
+                        </details>
+                    </p>
+                </details>
+            </li>
+            <li>
+                    <details> <summary> $(\overline{\mathrm{span}Y})^\perp = Y^\perp$ </summary>
+                        <p>
+                            <details> <summary> <strong> Proof: </strong> </summary>
+                                <p>
+                                    Let $ U := \mathrm{Span}Y $, and we know that $ U \subseteq \overline{U} \implies \overline{U}^\perp \subseteq U^\perp $.
+                                </p>
+                                <p>
+                                    If $v \in Y^\perp, u \in U$, then we have $ u = \sum_{i=1}^n \alpha_i y_i $ with $ y_i \in Y, \alpha_i \in \mathbb{F} $ &
+                                    $ n \in \mathbb{N}. $ So 
+                                </p>
+                            </details>
+                        </p>
+                    </details>
+            </li>
+       </ol>
 </details>
 </li>
 
-
+</ol>
 
 
 <!-- for definitions

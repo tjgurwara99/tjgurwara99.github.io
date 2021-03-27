@@ -534,7 +534,7 @@ describe everything there is to mathematics. However, this optimism has faded aw
                 <p>
                 Now applying the Subset Axiom Scheme, we have that:
                 $$
-                    \{ x \in \mathcal{PP}(A \cup B): \exits a \in A, b \in B \, x = \braket{a,b}}
+                    \{ x \in \mathcal{PP}(A \cup B): \exists a \in A, b \in B \, x = \braket{a,b}\}
                 $$
                 is a set.
                 </p>
